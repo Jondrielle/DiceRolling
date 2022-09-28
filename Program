@@ -1,0 +1,26 @@
+
+using System;
+
+namespace DiceRolling
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int dieTotal = 0;
+            int dieRollAmount;
+
+            Console.WriteLine("Please enter a number of times you want to roll the dice.");
+
+            dieRollAmount = int.Parse(Console.ReadLine());
+            Random randomDiceValue = new Random();
+
+            for (int i = 1; i <= dieRollAmount; i++)
+            {
+                dieTotal += randomDiceValue.Next(7);
+            }
+
+            Console.WriteLine($"Dice roll total is: {dieTotal}");
+        }
+    }
+}
